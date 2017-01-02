@@ -1,0 +1,10 @@
+{
+  "name": "Safe",
+  "version": "0.0.1",
+  "description": "\"A crash detection system\"",
+  "dependencies": {
+    "Materialize": "materialize#~0.97.0",
+    "jquery": "~2.2.1"
+  }
+  
+}

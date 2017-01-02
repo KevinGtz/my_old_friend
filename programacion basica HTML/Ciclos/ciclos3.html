@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>ciclos2</title>
+	<script type="text/javascript">
+
+
+function calcular()
+{
+	alert("Thank you!");
+}
+
+
+function inicio()
+{
+	var c = document.getElementById("caja");
+	var t = document.getElementById("Alejandra");
+	var b = document.getElementById("buttonik");
+
+	b.addEventListener("click", calcular);
+
+	var numbers = 1;
+	var residuo;
+
+	while (numbers <= 50)
+	{
+		residuo = numbers % 2;
+		if(residuo == 0)
+		{
+			c.innerHTML += " " + numbers;  
+		}
+		numbers ++;
+	}
+}
+
+	</script>
+</head>
+<body>
+	<input type ="text" id="Alejandra" />
+	<input type ="button" id="buttonik" value = "Touch me" />
+	<input type = "submit" value = "Enviame" /> 
+	<div id="caja"></div>
+	<div>other box!</div>
+	<script type="text/javascript">
+	inicio();
+	</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+py2neo==2.0.8
+simple-pbkdf2==1.0
+python-dotenv==0.3.0
+

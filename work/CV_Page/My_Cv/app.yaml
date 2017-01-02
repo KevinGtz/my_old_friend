@@ -1,0 +1,24 @@
+application: curriculum-1296
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /css
+  static_dir: templates/css
+
+- url: /font
+  static_dir: templates/font
+
+- url: /fonts
+  static_dir: templates/fonts
+
+- url: /img
+  static_dir: templates/static/img
+
+- url: /js
+  static_dir: templates/js
+
+- url: /.*
+  script: plantilla.app

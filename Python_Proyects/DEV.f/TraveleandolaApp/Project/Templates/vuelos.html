@@ -1,0 +1,44 @@
+{% extends "header.html" %}
+{% block title %}Vuelos{% endblock %}
+{% block content %}
+<ul>
+	{% for linea in aerolineas  %}
+	<li>{{linea.nombre}}</li>
+	<ul>
+		{% for vuelo in linea.vuelo_set.all  %}
+		<li>{{vuelo.destino}}</li>
+		{% endfor %}
+	</ul>
+	{% endfor %}
+</ul>
+
+
+<ul>
+	{% for linea in vuelos  %}
+	<li>{{linea.fecha}}</li>
+	<ul>
+		{% for vuelo in linea.vuelo_set.all  %}
+		<li>{{vuelo.vuelos}}</li>
+		{% endfor %}
+	</ul>
+	{% endfor %}
+</ul>
+
+
+<form method="POST">
+	{% csrf_token %}
+	{{form}}
+	<input type="submit" value="Guardame este recuerdito">
+</form>
+<ul>
+	{% if form.errors %}
+		{% for error in form.errors %}
+			<li> Tienes un error en {{error}}</li>
+		{% endfor %}
+	{% endif %}
+
+</ul>
+
+{% endblock %}
+
+{% include "footer.html" %}

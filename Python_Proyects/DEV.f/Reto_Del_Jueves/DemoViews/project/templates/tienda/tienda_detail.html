@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<p>{{object.tienda}}</p>
+	<p>{{object.direccion}}</p>
+	<p>{{object.contacto}}</p>
+
+	<a href="{% url 'create' %}">Crear</a>
+	<a href="{% url 'update' object.id %}">Actualizar</a>
+	<a href="{% url 'delete' object.id %}">Eliminar</a>
+</body>
+</html>
